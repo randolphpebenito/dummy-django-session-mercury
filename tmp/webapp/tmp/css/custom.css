@@ -1,0 +1,30 @@
+body {
+    background-color: #226268;
+}
+
+.navbar {
+    margin-bottom: 10px;
+}
+
+.nav-container {
+    padding-top: 10px;
+}
+
+a:hover {
+    color: hotpink;
+}
+
+
+
+.parallax {
+    background: url("../img/parallax.jpg") repeat fixed 100%;
+}
+.parallax-inner{
+    padding-top: 10%;
+    padding-bottom: 18%;
+}
+
+.im-centered { 
+    margin-top: 250px;
+    text-align:center;
+}
