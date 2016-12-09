@@ -6,7 +6,7 @@ from django.db import models
 # Create your models here.
 class Msisdn(models.Model):
     msisdn  = models.CharField(max_length=12, blank=False)
-    verif_code = models.CharField(max_length=12, null=True, db_index=True)
+    verif_code = models.CharField(max_length=12)
     is_verified = models.BooleanField(default=False)
     date_modified  = models.DateTimeField(auto_now=True)
     date_created = models.DateTimeField(auto_now_add=True)
@@ -24,6 +24,13 @@ class Msisdn(models.Model):
         self.verif_code = randint(range_start, range_end)
         return self.verif_code
 
+class MsisdnUrl(models.Model):
+    msisdn  = models.CharField(max_length=12, blank=False)
+    short_code = models.CharField(max_length=12)
+    timestamp  = models.DateTimeField(auto_now=True)
+
+    def __unicode__(self):
+        return self.url
 
 #class Content(models.Model):
 
