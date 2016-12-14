@@ -1,0 +1,29 @@
+{% extends "auth/base.html" %}
+{% load staticfiles %}
+{% block title %}Auth | Msisdn{% endblock %}
+
+{% block content %}
+	<div id="headerwrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 text-center">
+					<h1>Enter your mobile phone for verifcation
+					</h1>
+					<form class="form-inline" role="form" method="post">
+                        {% csrf_token %}
+					  <div class="form-group">
+                          {{ form }}
+					  </div>
+					  <button type="submit" class="btn btn-warning btn-lg">SEND</button>
+					</form>					
+				</div><!-- /col-lg-6 -->
+				<div class="col-lg-6">
+                    <img class="img-responsive" src="{% static 'img/ipad-hand.png'%}" alt="">
+				</div><!-- /col-lg-6 -->
+				
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /headerwrap -->
+{% endblock %}
+
+

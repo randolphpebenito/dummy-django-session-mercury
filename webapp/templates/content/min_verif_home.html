@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% load staticfiles %}
+{% block style %}
+    <link rel="stylesheet" type="text/css" href=" {% static 'css/home.css'%}">
+{% endblock %}
+
+{% block title %}Home{% endblock %}
+
+{% block head %}Thank You!{% endblock %}
+{% block content %}
+<h1>Click to download your content {{MEDIA_ROOT}}fenella.jpg</h1>
+<a href="http://{{ request.get_host }}/{{ MEDIA_URL }}fenella.jpg">
+<i class="fa fa-download fa-5x" aria-hidden="true"></i>
+</a>
+<p>
+<!--	<img src="http://{{ request.get_host }}/{{ MEDIA_URL }}{{ mms.content_file.name }}" alt="{{ mms.content_file.name }}"> -->
+
+</p>
+
+{% endblock %}

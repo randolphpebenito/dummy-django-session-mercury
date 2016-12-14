@@ -5,7 +5,13 @@ from django.contrib.auth.models import User
 FMT_MSISDN_REGEX = re.compile("""^09\d{9}$""")
 
 class MsisdnForm(forms.Form):
-    msisdn = forms.CharField(label='', max_length=100, widget=forms.TextInput(attrs={'placeholder': 'e.g 09xxxxxxxxx'}))
+    #msisdn = forms.CharField(label='', max_length=100, widget=forms.TextInput(attrs={'placeholder': 'e.g 09xxxxxxxxx'}))
+    msisdn = forms.CharField(label='', max_length=100, 
+            widget=forms.TextInput(attrs={
+                'placeholder': 'e.g 09xxxxxxxxx',
+                'class': 'form-control',
+                #type="email" class="form-control" id="exampleInputEmail1" placeholder="e.g. 09xxxxxxxxx"
+            }))
 
     def clean_msisdn(self):
         msisdn = self.cleaned_data['msisdn']
@@ -29,5 +35,8 @@ class MsisdnForm(forms.Form):
         return user_msisdn 
 
 class MsisdnVerifForm(forms.Form):
-    verif = forms.CharField(label='', max_length=100, widget=forms.TextInput(attrs={'placeholder': 'e.g 12345'}))
+    verif = forms.CharField(label='', max_length=100, widget=forms.TextInput(attrs={
+            'placeholder': 'e.g 12345',
+            'class': 'form-control',
+        }))
 

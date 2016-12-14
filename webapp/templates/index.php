@@ -1,0 +1,168 @@
+<?php
+	require_once dirname(__FILE__) . '/../wap2/Classes/bootstrap.php';
+	require_once 'User.php';
+
+	header("Cache-Control: no-cache, must-revalidate");
+	header("Pragma: no-cache");
+
+	$user = new User;
+
+	$msisdn = $user->getMsisdn();
+	$access_number = '3456';
+	$optin_keyword = 'RTOPERAAC';
+	$optin_keyword = array('_ENTRYPOINT', $user->getDomainUsed()."-opera", $optin_keyword);
+	$optin_command = join("+", $optin_keyword);
+
+	if (isset($msisdn)) {
+		$telco = $user->getTelco();
+		error_log("$optin_command");
+		$telco->executeSMSCommand($access_number, $optin_command);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>RT Juanderful Access Landing Page</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="row nospace" style="background-color: #000000;">
+        <div class="col-md-12 header">
+                <a class="rt-banner"></a>
+        </div>
+    </div>
+    <div class="row banner nospace">
+        <div class="col-md-9 col-md-offset-3">
+            <a href><img src="img/banner.jpg" class="img-responsive"></a>
+        </div>
+    </div> <!-- /.row banner --> 
+
+    <div class="jumbotron text-center cover-subs" style="margin-bottom: 1px;">
+        <div class="container">
+            <p>You will now start earning entries to get a change to win in the JUANDERFUL TRIP SA PINAS promo!</p>
+            <p>The next featured trip is:</p>
+            <h1>CEBU</h1>
+						<p><a class="btn btn-info btn-lg" href="http://globe.mymusic.ph/juanderfulaccess/content.html" role="button">CONTENT</a></p>
+        </div> <!-- /.container -->
+    </div><!-- /.jumbotron text-center cover-->
+    <div class="container text-center" style="background-color:#f7f7f7;">
+        <h3 style="color: #0BC7B4;">Thank you for subscribing to free 1-day MP3 of All Access Service.</h3>
+        <h3 style="color: #0BC7B4;"> Your continuous paid enrollment to this subscription service will start tomorrow at P2.50 daily</h3>
+        <p style="color: #909090; margin: 1em auto 2em">Text OFF ACCESS to 3456 if you wish to cancel. Please wait for the confiration to be sent via SMS.</p>
+    </div>
+    <section class="parallax">
+        <div class="text-center parallax-inner" >
+            <h3 style="color: #fff;">Enjoy your FREE MP3 today. You will be charged P2.50 daily after free.</h3>
+            <p style="color: #fff;">Start earning more entries for every download for more chances of winning!</p>
+                <!--<a class="btn btn-lg btn-default btn-block" href="#">Read More</a>-->
+                <a class="btnmore" href="http://globe.mymusic.ph/juanderful/promo-mech.html">Read More</a>
+        </div><!-- /.parallax-inner -->
+    </section><!-- /.parallax -->
+
+    <section class="bground">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="page-header text-center" style="color: #fff">Here's more cool downloads for you to choose from</h3>
+                </div><!-- /.col-lg-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+        <div class="bground-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <div class="thumbnail-label" style="background-color: #0099e5;">
+                                <h3><i class="fa fa-music fa-1x" aria-hidden="true"></i> Truetones</h3>
+                            </div><!-- /.thumbnail-label -->
+                            <div class="caption text-center">
+                                <h5>FREE Wish I May by Alden Richards premium truetone!</h5>
+                                <p><a href="http://globe.mymusic.ph/rtoperaactone1" class="btn btn-download" role="button"><i class="fa fa-download" aria-hidden="true"></i> Download</a></p>
+                                <hr>
+                                <h5>FREE O Pag-Ibig by Ylona Garcia and Bailey May premium truetone</h5>
+                                <p><a href="http://globe.mymusic.ph/rtoperaactone2" class="btn btn-download" role="button"><i class="fa fa-download" aria-hidden="true"></i> Download</a></p>
+                            </div><!-- /.caption -->
+                            <span id="helpBlock" class="help-block" style="font-size: 10px;">
+                            *Free subscription to MP3 Service on 1-Day free trial; Paid subscription continues at P15, 2x weekly after free trial expires
+                            </span>
+                        </div><!-- /.thumbnail -->
+                    </div><!-- /.col-sm-6 col-md-4 -->
+
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <div class="thumbnail-label" style="background-color: #7ac143;">
+                                <h3><i class="fa fa-mobile fa-1x" aria-hidden="true"></i> Mobile Radio Series</h3>
+                            </div><!-- /.thumbnail-label -->
+                            <div class="caption text-center">
+                                <p>Get all the feels with your FREE 1-day access to access to voice drama series. Download today!</>
+                                <p><a href="http://globe.mymusic.ph/rtoperaacserye" class="btn btn-download"><i class="fa fa-download" aria-hidden="true"></i> Download</a></p>
+                            </div><!-- /.caption -->
+                            <span id="helpBlock" class="help-block" style="font-size: 10px;">
+                            *Free subscription to Mobile Serye on 1-Day free trial; Paid subscription at P5 daily after free trial expires
+                            </span>
+                        </div><!-- /.thumbnail -->
+                    </div><!-- /.col-sm-6 col-md-4 -->
+
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <div class="thumbnail-label" style="background-color: #fd5c63;">
+                                <h3><i class="fa fa-sticky-note-o fa-1x" aria-hidden="true"></i> Stickers</h3>
+                            </div><!-- /.thumbnail-label -->
+                            <div class="caption text-center">
+                                <h5>FREE Cute Jungle Friend Sticker!</h5>
+                                <p><a href="http://globe.mymusic.ph/rtoperaft1" class="btn btn-download" role="button"><i class="fa fa-download" aria-hidden="true"></i> Download</a></p>
+                                <hr>
+                                <h5>FREE Adorable Pet Sticker!</h5>
+                                <p><a href="http://globe.mymusic.ph/rtoperaft2" class="btn btn-download" role="button"><i class="fa fa-download" aria-hidden="true"></i> Download</a></p>
+                            </div><!-- /.caption -->
+                            <span id="helpBlock" class="help-block" style="font-size: 10px;">
+                            *Free subscription to Funtoons sticker service on 1-Day free trial; Paid subscription continues at P2.50 daily after
+                            free trial expires
+                            </span>
+                        </div><!-- /.thumbnail -->
+                    </div><!-- /.col-sm-6 col-md-4 --> 
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /.bground-inner -->
+    </section>
+    <hr>
+    <!-- Footer -->
+    <div class="container">
+        <footer>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <span id="helpBlock" class="help-block" style="font-size: 10px;">Per DTI-FTEBPD# 1368S16 til Dec.31,2016</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+		<?php }
+
+		// end :: if ?>
+</body>
+
+</html>

@@ -1,8 +1,7 @@
 from django.contrib import admin
-from .models import Msisdn
+from .models import Content
 
 # Register your models here.
-class MsisdnAdmin(admin.ModelAdmin):
+class ContentAdmin(admin.ModelAdmin):
     list_display = ('__unicode__',)
-admin.site.register(Msisdn, MsisdnAdmin)
-
+admin.site.register(Content, ContentAdmin)

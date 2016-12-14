@@ -1,0 +1,111 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+.cover {
+    background-image: url('../img/siargao-own-bg.jpg');
+    background-repeat: no-repeat;
+    background-position bottom center; 
+    background-size: cover;
+}
+
+.cover-subs {
+    background-image: url('../img/siargao-duds.jpg');
+    background-repeat: no-repeat;
+    background-position bottom center; 
+    background-size: cover;
+}
+
+.rt-banner {
+    display: block;
+    background: url(../img/mymusic-logo.png) top center no-repeat;
+    background-size: contain;
+    width: 100%;
+    min-width: 300px;
+    height: 70px;
+}
+.jumbotron .container {
+    max-width: 90rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    color: white;
+} 
+
+.btn-download {
+    background: #333;
+    border: solid 1px #333;
+    padding: .5em 2em;
+    color: #FFF;
+    -webkit-border-radius: 5px;
+}
+.thumbnail-label {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+    color: #FFF;
+
+}
+.bground {
+    background-color: #222c37 !important;
+
+}
+.bground-inner {
+}
+
+.content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-weight: 700;
+    color: #73eac4;
+    text-align: center;
+}
+
+@media(min-width:768px) {
+    .j-content {
+        background: url(../img/cebu-content.jpg) no-repeat;
+    /*    background-position-y: -500px; */
+        background-size: cover;
+        height: 500px;
+        width: 100%; 
+
+    }
+}
+@media(max-width:768px) {
+    .j-content {
+        background: url(../img/cebu-content.jpg) no-repeat;
+        background-size: cover;
+        height: 500px;
+    }
+}
+
+.banner {
+    background-color: #FDD85F;
+}
+.parallax {
+        background: url("../img/siargao-hifive2.jpg") repeat fixed 100%;
+    }
+.parallax-inner{
+    padding-top: 10%;
+    padding-bottom: 15%;
+}
+.btnmore {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #3BD1F8;
+    display: inline-block;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    padding: 8px 30px;
+}
+
+.nospace {
+    margin-left: -15px;
+    margin-right: 0px;
+    
+
+}

@@ -1,0 +1,46 @@
+{% extends "auth/base.html" %}
+{% load staticfiles %}
+{% block title %}Auth | Verify{% endblock %}
+
+
+
+
+{% block content %}
+	<div id="headerwrap" style="background-color: #216e80">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 text-center">
+					<h1>Enter your code
+					</h1>
+					<form class="form-inline" role="form" method="post">
+                        {% csrf_token %}
+                        {% if invalid_verif %}
+                            <div class="alert alert-danger" role="alert" style="margin-left: 103px; margin-right: 105px">
+                                <p><strong>Invalid verif code!</strong></p>
+                            </div>
+                        {% endif %}
+					  <div class="form-group">
+                          {{ form }}
+					  </div>
+					  <button type="submit" class="btn btn-warning btn-lg">VERIF</button>
+					</form>					
+				</div><!-- /col-lg-6 -->
+				<div class="col-lg-6">
+                    <img class="img-responsive" src="{% static 'img/ipad-hand.png'%}" alt="">
+				</div><!-- /col-lg-6 -->
+				
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /headerwrap -->
+{% endblock %}
+
+
+<!--<form method="POST" class="post-form">{% csrf_token %}
+    {% if invalid_verif %}
+        <p>Invalid verif code!</p>
+		</br>
+    {% endif %}
+    {{ form.as_p }}
+    <button type="submit" class="save btn btn-default">Submit</button>
+</form>-->
+

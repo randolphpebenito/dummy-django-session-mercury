@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load static %}
+{% load staticfiles %}
+{% block style %}
+    <link rel="stylesheet" type="text/css" href=" {% static 'css/home.css'%}">
+{% endblock %}
+
+{% block title %}Content | List{% endblock %}
+
+{% block content %}
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="page-header text-center" style="color: #fff">Here's more cool downloads for you to choose from</h3>
+                </div><!-- /.col-lg-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+        <div class="bground-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <div class="thumbnail-label" style="background-color: #0099e5;">
+                                <h3><i class="fa fa-music fa-1x" aria-hidden="true"></i> Truetones</h3>
+                            </div><!-- /.thumbnail-label -->
+                            <div class="caption text-center">
+                                <h5>FREE Wish I May by Alden Richards premium truetone!</h5>
+                                <p><a href="http://globe.mymusic.ph/rtoperaactone1" class="btn btn-download" role="button"><i class="fa fa-download" aria-hidden="true"></i> Download</a></p>
+                                <hr>
+                                <h5>FREE O Pag-Ibig by Ylona Garcia and Bailey May premium truetone</h5>
+                                <p><a href="http://globe.mymusic.ph/rtoperaactone2" class="btn btn-download" role="button"><i class="fa fa-download" aria-hidden="true"></i> Download</a></p>
+                            </div><!-- /.caption -->
+                            <span id="helpBlock" class="help-block" style="font-size: 10px;">
+                            *Free subscription to MP3 Service on 1-Day free trial; Paid subscription continues at P15, 2x weekly after free trial expires
+                            </span>
+                        </div><!-- /.thumbnail -->
+                    </div><!-- /.col-sm-6 col-md-4 -->
+
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <div class="thumbnail-label" style="background-color: #7ac143;">
+                                <h3><i class="fa fa-mobile fa-1x" aria-hidden="true"></i> Mobile Radio Series</h3>
+                            </div><!-- /.thumbnail-label -->
+                            <div class="caption text-center">
+                                <p>Get all the feels with your FREE 1-day access to access to voice drama series. Download today!</>
+                                <p><a href="http://globe.mymusic.ph/rtoperaacserye" class="btn btn-download"><i class="fa fa-download" aria-hidden="true"></i> Download</a></p>
+                            </div><!-- /.caption -->
+                            <span id="helpBlock" class="help-block" style="font-size: 10px;">
+                            *Free subscription to Mobile Serye on 1-Day free trial; Paid subscription at P5 daily after free trial expires
+                            </span>
+                        </div><!-- /.thumbnail -->
+                    </div><!-- /.col-sm-6 col-md-4 -->
+
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <div class="thumbnail-label" style="background-color: #fd5c63;">
+                                <h3><i class="fa fa-sticky-note-o fa-1x" aria-hidden="true"></i> Stickers</h3>
+                            </div><!-- /.thumbnail-label -->
+                            <div class="caption text-center">
+                                <h5>FREE Cute Jungle Friend Sticker!</h5>
+                                <p><a href="http://globe.mymusic.ph/rtoperaft1" class="btn btn-download" role="button"><i class="fa fa-download" aria-hidden="true"></i> Download</a></p>
+                                <hr>
+                                <h5>FREE Adorable Pet Sticker!</h5>
+                                <p><a href="http://globe.mymusic.ph/rtoperaft2" class="btn btn-download" role="button"><i class="fa fa-download" aria-hidden="true"></i> Download</a></p>
+                            </div><!-- /.caption -->
+                            <span id="helpBlock" class="help-block" style="font-size: 10px;">
+                            *Free subscription to Funtoons sticker service on 1-Day free trial; Paid subscription continues at P2.50 daily after
+                            free trial expires
+                            </span>
+                        </div><!-- /.thumbnail -->
+                    </div><!-- /.col-sm-6 col-md-4 --> 
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /.bground-inner -->
+
+{% endblock %}

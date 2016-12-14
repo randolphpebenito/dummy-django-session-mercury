@@ -1,38 +1,17 @@
 from __future__ import unicode_literals
-from random import randint
 
 from django.db import models
 
-# Create your models here.
-class Msisdn(models.Model):
-    msisdn  = models.CharField(max_length=12, blank=False)
-    verif_code = models.CharField(max_length=12)
-    is_verified = models.BooleanField(default=False)
-    date_modified  = models.DateTimeField(auto_now=True)
-    date_created = models.DateTimeField(auto_now_add=True)
 
-
-    class Meta:
-        verbose_name_plural = "Msisdn"
-
-    def __unicode__(self):
-        return self.msisdn
-
-    def set_verif_code(self, length):
-        range_start = 10**(length-1)
-        range_end = (10**length)-1
-        self.verif_code = randint(range_start, range_end)
-        return self.verif_code
-
-class MsisdnUrl(models.Model):
-    msisdn  = models.CharField(max_length=12, blank=False)
-    short_code = models.CharField(max_length=12)
+class Content(models.Model):
+    content_name = models.CharField(max_length=64)
+    content_type = models.CharField(max_length=64)
+    content_file = models.FileField(upload_to='contents/', default='settings.MEDIA_ROOT/tmp/tmp.mms')
+    content_dl_ctr = models.PositiveSmallIntegerField(default=0)
     timestamp  = models.DateTimeField(auto_now=True)
 
     def __unicode__(self):
-        return self.url
-
-#class Content(models.Model):
+        return str(self.content_name)
 
 
 '''
