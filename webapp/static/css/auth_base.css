@@ -1,6 +1,6 @@
 
 /* HeaderWrap */
-#headerwrap {
+.headerwrap {
 	/* background: url(../img/bg01.jpg) no-repeat center top; */
 	background-color: #3498db;
 	margin-top: -20px;
@@ -21,7 +21,7 @@
     background-size: cover;
 }
 
-#headerwrap h1 {
+.headerwrap h1 {
 	margin-top: 60px;
 	margin-bottom: 15px;
 	color: white;
@@ -31,7 +31,7 @@
 }
 
 .navbar-default {
-	background-color: #3498db;
+	background-color: #333332;
 	border-color: transparent;
 }
 .navbar-default .navbar-brand {
@@ -43,6 +43,28 @@
 }
 
 
+.min-verif {
+	margin-top: -20px;
+	padding-top:200px;
+	background-attachment: relative;
+	min-height: 650px;
+	width: 100%;
+    background-image: url('../img/w-grey.jpg');
+    background-repeat: no-repeat;
+    background-position bottom center; 
+    background-size: cover;
+}
+.min-verif-challenge {
+	margin-top: -20px;
+	padding-top:200px;
+	background-attachment: relative;
+	min-height: 650px;
+	width: 100%;
+    background-image: url('../img/w-blocks.jpg');
+    background-repeat: no-repeat;
+    background-position bottom center; 
+    background-size: cover;
+}
 .form-control {
 	height: 42px;
 	font-size: 18px;
